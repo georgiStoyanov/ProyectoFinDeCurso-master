@@ -91,7 +91,7 @@ public class AllOrdersWindow extends JFrame {
 		gbl_contentPane.columnWidths = new int[]{376, 135, 158, 0};
 		gbl_contentPane.rowHeights = new int[] {15, 285, 24, 0};
 		gbl_contentPane.columnWeights = new double[]{1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 1.0, 1.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
 		lblRequests = new JLabel("Requests:");
@@ -118,6 +118,7 @@ public class AllOrdersWindow extends JFrame {
 		contentPane.add(scrollPane, gbc_scrollPane);
 		
 		JlistOrders = new JList();
+		JlistOrders.setFont(new Font("Gungsuh", Font.PLAIN, 12));
 		JlistOrders.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(JlistOrders);
 		JlistOrders.setOpaque(false);
@@ -151,15 +152,15 @@ public class AllOrdersWindow extends JFrame {
 		});
 		btnExec.setFont(new Font("Gungsuh", Font.BOLD, 12));
 		GridBagConstraints gbc_btnExec = new GridBagConstraints();
-		gbc_btnExec.fill = GridBagConstraints.VERTICAL;
-		gbc_btnExec.anchor = GridBagConstraints.EAST;
+		gbc_btnExec.anchor = GridBagConstraints.SOUTHEAST;
 		gbc_btnExec.insets = new Insets(0, 0, 0, 5);
 		gbc_btnExec.gridx = 0;
 		gbc_btnExec.gridy = 2;
 		contentPane.add(btnExec, gbc_btnExec);
 		btnCancelReq.setFont(new Font("Gungsuh", Font.BOLD, 12));
 		GridBagConstraints gbc_btnCancelReq = new GridBagConstraints();
-		gbc_btnCancelReq.fill = GridBagConstraints.BOTH;
+		gbc_btnCancelReq.anchor = GridBagConstraints.SOUTH;
+		gbc_btnCancelReq.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCancelReq.insets = new Insets(0, 0, 0, 5);
 		gbc_btnCancelReq.gridx = 1;
 		gbc_btnCancelReq.gridy = 2;
@@ -175,7 +176,8 @@ public class AllOrdersWindow extends JFrame {
 		});
 		btnClose.setFont(new Font("Gungsuh", Font.BOLD, 12));
 		GridBagConstraints gbc_btnClose = new GridBagConstraints();
-		gbc_btnClose.fill = GridBagConstraints.BOTH;
+		gbc_btnClose.anchor = GridBagConstraints.SOUTH;
+		gbc_btnClose.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnClose.gridx = 2;
 		gbc_btnClose.gridy = 2;
 		contentPane.add(btnClose, gbc_btnClose);

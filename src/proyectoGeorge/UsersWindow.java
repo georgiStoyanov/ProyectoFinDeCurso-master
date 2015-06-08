@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -29,6 +30,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.ListSelectionModel;
 import javax.swing.JLabel;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
 
 
 public class UsersWindow extends JFrame {
@@ -85,14 +88,35 @@ public class UsersWindow extends JFrame {
 		setFrameIcon();
 		setBackground();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 594, 207);
+		setBounds(100, 100, 579, 269);
 		getContentPane().setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 28, 315, 130);
+		scrollPane.setBounds(10, 28, 412, 130);
 		getContentPane().add(scrollPane);
 		
+		final JLabel lblPicture = new JLabel("");
+		lblPicture.setForeground(new Color(102, 153, 51));
+		lblPicture.setToolTipText("Please upload ONLY images in a correct image format such as \"png\",\"jpg\",\"gif\".\r\nAny inappropriate image puts your whole profile at risk.");
+		lblPicture.setBounds(432, 28, 126, 134);
+		getContentPane().add(lblPicture);
+		
 		final JList monitoredList = new JList();
+		monitoredList.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent arg0) {
+				try {
+					byte[] imageObtained=((User) monitoredList.getSelectedValue()).getImage();
+					ByteArrayInputStream bais = new ByteArrayInputStream(imageObtained);
+					BufferedImage img = ImageIO.read(bais);
+					Image bufferedImage =img.getScaledInstance(lblPicture.getWidth(), lblPicture.getHeight(),
+							Image.SCALE_SMOOTH);
+					lblPicture.setIcon(new ImageIcon(bufferedImage));
+				} catch (NullPointerException | IOException e) {
+					lblPicture.setIcon(null);
+					lblPicture.setText("No image for this user");
+				}
+			}
+		});
 		monitoredList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(monitoredList);
 		
@@ -102,7 +126,7 @@ public class UsersWindow extends JFrame {
 				userAction(monitoredList, false, true, false);
 			}
 		});
-		btnRemoveAdmin.setBounds(353, 67, 201, 23);
+		btnRemoveAdmin.setBounds(221, 169, 201, 23);
 		getContentPane().add(btnRemoveAdmin);
 		
 		JButton btnMakeAdmin = new JButton("Make admin");
@@ -112,7 +136,7 @@ public class UsersWindow extends JFrame {
 				userAction(monitoredList,true,false,false);
 			}
 		});
-		btnMakeAdmin.setBounds(353, 33, 201, 23);
+		btnMakeAdmin.setBounds(10, 169, 201, 23);
 		getContentPane().add(btnMakeAdmin);
 		
 		JButton btnRemoveUser = new JButton("Remove user");
@@ -121,7 +145,7 @@ public class UsersWindow extends JFrame {
 				userAction(monitoredList, false, false, true);
 			}
 		});
-		btnRemoveUser.setBounds(353, 101, 201, 23);
+		btnRemoveUser.setBounds(10, 203, 201, 23);
 		getContentPane().add(btnRemoveUser);
 		
 		JButton btnExit = new JButton("Exit");
@@ -132,7 +156,7 @@ public class UsersWindow extends JFrame {
 				UsersWindow.this.dispose();
 			}
 		});
-		btnExit.setBounds(353, 135, 201, 23);
+		btnExit.setBounds(221, 203, 201, 23);
 		getContentPane().add(btnExit);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -154,6 +178,7 @@ public class UsersWindow extends JFrame {
 				monitoredList.setCellRenderer(new TransparentListCellRenderer());
 				scrollPane.getViewport().setOpaque(false);
 				scrollPane.setOpaque(false);
+				
 	}
 	protected void userAction(JList list,boolean makeAdmin,boolean rAdminRights,boolean removeUser) {
 		User selected=(User) list.getSelectedValue();

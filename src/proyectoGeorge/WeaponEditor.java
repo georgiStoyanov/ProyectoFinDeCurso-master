@@ -327,10 +327,12 @@ public class WeaponEditor extends JFrame {
 			lblCom.setText("Invalid cuantity.");
 		}
 		boolean isActive=chActive.isSelected();
-		if(category==null || brand==null || model==null){
+		if(category.equals("") || brand.equals("")|| model.equals("")){
 			lblCom.setText("*You forget something");
+			return;
 		}
 		else{
+			System.out.println("Category: "+txtCategory.getText());
 			Weapon w=new Weapon();
 			w.setCategory(category);
 			w.setBrand(brand);
@@ -361,8 +363,9 @@ public class WeaponEditor extends JFrame {
 		} catch (Exception e) {
 			lblCom.setText("Invalid cuantity.");
 		}
-		if(category==null || brand==null || model==null){
+		if(category.equals("") || brand.equals("")|| model.equals("")){
 			lblCom.setText("*You forget something");
+			return;
 		}
 		else{
 			w.setCategory(category);

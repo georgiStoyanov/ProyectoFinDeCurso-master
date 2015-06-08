@@ -15,7 +15,7 @@ public class OrderCellRenderer extends JLabel implements ListCellRenderer<Order>
 	@Override
 	public Component getListCellRendererComponent(JList<? extends Order> list,
 			Order value, int index, boolean isSelected, boolean cellHasFocus) {
-		setText(value.getUser().getName()+" Requested: "+value.getOrderSize()+" "+value.getWeapon().getBrand()+" "+value.getWeapon().getModel());
+		setText(value.getUser().getName()+" Requested: "+value.getOrderSize()+" "+value.getWeapon().getBrand()+" "+value.getWeapon().getModel()+" on the "+value.getDate());
 
         setForeground(new Color(102, 153, 51));
         setOpaque(isSelected);

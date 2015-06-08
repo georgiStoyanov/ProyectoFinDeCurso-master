@@ -1,5 +1,8 @@
 package proyectoGeorge;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -13,6 +16,7 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 //////----------------------->ORDER IS NOW REQUEST IN THE SHOP<-------------------------
 @Entity
 @Table(name="ORDER_TABLE")
@@ -24,8 +28,15 @@ public class Order {
 	private User buyer;
 	@ManyToOne @JoinColumn(name="orderedWeapons")
 	private Weapon ordered;
-
+	@Transient
+	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	@Transient
+	Date date = new Date();
+	@Column
+	private String currentDate=dateFormat.format(date);
+	@Column
 	private int orderSize;
+	
 	public Weapon getWeapon(){
 		return this.ordered;
 	}
@@ -47,6 +58,9 @@ public class Order {
 	}
 	protected void setOrderSize(int newSize) {
 		this.orderSize=newSize;
+	}
+	protected String getDate() {
+		return this.currentDate;
 	}
 	
 	@Override
