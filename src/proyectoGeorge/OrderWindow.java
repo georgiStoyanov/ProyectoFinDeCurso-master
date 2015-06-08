@@ -366,8 +366,12 @@ public class OrderWindow extends JFrame {
 			int qOrdered=0;
 			try {
 				qOrdered=Integer.parseInt(txtQuantity.getText());
+				if(qOrdered<=0){
+					lblCom.setText("Verry funny...");
+					return;
+				}
 			} catch (Exception e) {
-				lblCom.setText("Alien invasion!");
+				lblCom.setText("Verry funny...");
 			}
 			o.setOrderSize(qOrdered);
 			w.setQuantity(w.getQuantity()-qOrdered);

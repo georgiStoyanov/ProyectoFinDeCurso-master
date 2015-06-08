@@ -99,220 +99,220 @@ public class WeaponEditor extends JFrame {
 		gridBagLayout.columnWeights = new double[]{1.0, 1.0, 0.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		getContentPane().setLayout(gridBagLayout);
-				
-						JLabel lblCategory = new JLabel("Category:");
-						lblCategory.setForeground(new Color(102, 153, 51));
-						lblCategory.setFont(new Font("Aharoni", Font.PLAIN, 14));
-						lblCategory.setHorizontalAlignment(SwingConstants.RIGHT);
-						lblCategory.setToolTipText("Category of the weapon.If others type others");
-						GridBagConstraints gbc_lblCategory = new GridBagConstraints();
-						gbc_lblCategory.fill = GridBagConstraints.BOTH;
-						gbc_lblCategory.insets = new Insets(0, 0, 5, 5);
-						gbc_lblCategory.gridx = 0;
-						gbc_lblCategory.gridy = 0;
-						getContentPane().add(lblCategory, gbc_lblCategory);
-						
-						
-								txtCategory = new JTextField();
-								GridBagConstraints gbc_txtCategory = new GridBagConstraints();
-								gbc_txtCategory.fill = GridBagConstraints.HORIZONTAL;
-								gbc_txtCategory.insets = new Insets(0, 0, 5, 0);
-								gbc_txtCategory.gridwidth = 5;
-								gbc_txtCategory.gridx = 1;
-								gbc_txtCategory.gridy = 0;
-								getContentPane().add(txtCategory, gbc_txtCategory);
-								txtCategory.setColumns(10);
-										
-												JLabel lblManufacturer = new JLabel("Manufacturer:");
-												lblManufacturer.setForeground(new Color(102, 153, 51));
-												lblManufacturer.setFont(new Font("Aharoni", Font.PLAIN, 14));
-												lblManufacturer.setHorizontalAlignment(SwingConstants.RIGHT);
-												lblManufacturer.setToolTipText("Manufacturer of the item.... ");
-												GridBagConstraints gbc_lblManufacturer = new GridBagConstraints();
-												gbc_lblManufacturer.fill = GridBagConstraints.BOTH;
-												gbc_lblManufacturer.insets = new Insets(0, 0, 5, 5);
-												gbc_lblManufacturer.gridx = 0;
-												gbc_lblManufacturer.gridy = 1;
-												getContentPane().add(lblManufacturer, gbc_lblManufacturer);
-								
-										txtBrand = new JTextField();
-										GridBagConstraints gbc_txtBrand = new GridBagConstraints();
-										gbc_txtBrand.fill = GridBagConstraints.HORIZONTAL;
-										gbc_txtBrand.insets = new Insets(0, 0, 5, 0);
-										gbc_txtBrand.gridwidth = 5;
-										gbc_txtBrand.gridx = 1;
-										gbc_txtBrand.gridy = 1;
-										getContentPane().add(txtBrand, gbc_txtBrand);
-										txtBrand.setColumns(10);
-								
-										JLabel lblModel = new JLabel("Model:");
-										lblModel.setForeground(new Color(102, 153, 51));
-										lblModel.setFont(new Font("Aharoni", Font.PLAIN, 14));
-										lblModel.setHorizontalAlignment(SwingConstants.RIGHT);
-										lblModel.setToolTipText("Model of the wapon.If others type others");
-										GridBagConstraints gbc_lblModel = new GridBagConstraints();
-										gbc_lblModel.fill = GridBagConstraints.BOTH;
-										gbc_lblModel.insets = new Insets(0, 0, 5, 5);
-										gbc_lblModel.gridx = 0;
-										gbc_lblModel.gridy = 2;
-										getContentPane().add(lblModel, gbc_lblModel);
-								
-										txtModel = new JTextField();
-										GridBagConstraints gbc_txtModel = new GridBagConstraints();
-										gbc_txtModel.fill = GridBagConstraints.HORIZONTAL;
-										gbc_txtModel.insets = new Insets(0, 0, 5, 0);
-										gbc_txtModel.gridwidth = 5;
-										gbc_txtModel.gridx = 1;
-										gbc_txtModel.gridy = 2;
-										getContentPane().add(txtModel, gbc_txtModel);
-										txtModel.setColumns(10);
-						
-								JLabel lblPrice = new JLabel("Price:");
-								lblPrice.setForeground(new Color(102, 153, 51));
-								lblPrice.setToolTipText("Model of the wapon.If others type others");
-								lblPrice.setHorizontalAlignment(SwingConstants.RIGHT);
-								lblPrice.setFont(new Font("Aharoni", Font.PLAIN, 14));
-								GridBagConstraints gbc_lblPrice = new GridBagConstraints();
-								gbc_lblPrice.fill = GridBagConstraints.BOTH;
-								gbc_lblPrice.insets = new Insets(0, 0, 5, 5);
-								gbc_lblPrice.gridx = 0;
-								gbc_lblPrice.gridy = 3;
-								getContentPane().add(lblPrice, gbc_lblPrice);
-								
-										txtPrice = new JTextField();
-										txtPrice.setColumns(10);
-										GridBagConstraints gbc_txtPrice = new GridBagConstraints();
-										gbc_txtPrice.fill = GridBagConstraints.HORIZONTAL;
-										gbc_txtPrice.insets = new Insets(0, 0, 5, 5);
-										gbc_txtPrice.gridwidth = 3;
-										gbc_txtPrice.gridx = 1;
-										gbc_txtPrice.gridy = 3;
-										getContentPane().add(txtPrice, gbc_txtPrice);
-						
-								JLabel label = new JLabel(",");
-								GridBagConstraints gbc_label = new GridBagConstraints();
-								gbc_label.anchor = GridBagConstraints.EAST;
-								gbc_label.insets = new Insets(0, 0, 5, 5);
-								gbc_label.gridx = 3;
-								gbc_label.gridy = 3;
-								getContentPane().add(label, gbc_label);
-				
-						txtPriceDecimals = new JTextField();
-						GridBagConstraints gbc_txtPriceDecimals = new GridBagConstraints();
-						gbc_txtPriceDecimals.fill = GridBagConstraints.HORIZONTAL;
-						gbc_txtPriceDecimals.insets = new Insets(0, 0, 5, 0);
-						gbc_txtPriceDecimals.gridwidth = 2;
-						gbc_txtPriceDecimals.gridx = 4;
-						gbc_txtPriceDecimals.gridy = 3;
-						getContentPane().add(txtPriceDecimals, gbc_txtPriceDecimals);
-						txtPriceDecimals.setColumns(10);
-				
-						chActive = new JCheckBox("Active");
-						chActive.addKeyListener(new KeyAdapter() {
-							@Override
-							public void keyPressed(KeyEvent e) {
-								if(e.getKeyCode()==KeyEvent.VK_ENTER){
-									chActive.setSelected(true);
-								}
-							}
-						});
-						
-								lblCuantity = new JLabel("Quantity:");
-								lblCuantity.setToolTipText("Model of the wapon.If others type others");
-								lblCuantity.setHorizontalAlignment(SwingConstants.RIGHT);
-								lblCuantity.setForeground(new Color(102, 153, 51));
-								lblCuantity.setFont(new Font("Aharoni", Font.PLAIN, 14));
-								GridBagConstraints gbc_lblCuantity = new GridBagConstraints();
-								gbc_lblCuantity.fill = GridBagConstraints.BOTH;
-								gbc_lblCuantity.insets = new Insets(0, 0, 5, 5);
-								gbc_lblCuantity.gridx = 0;
-								gbc_lblCuantity.gridy = 4;
-								getContentPane().add(lblCuantity, gbc_lblCuantity);
-						
-								txtCuantity = new JTextField();
-								txtCuantity.setToolTipText("In numbers.");
-								txtCuantity.setColumns(10);
-								GridBagConstraints gbc_txtCuantity = new GridBagConstraints();
-								gbc_txtCuantity.fill = GridBagConstraints.HORIZONTAL;
-								gbc_txtCuantity.insets = new Insets(0, 0, 5, 0);
-								gbc_txtCuantity.gridwidth = 5;
-								gbc_txtCuantity.gridx = 1;
-								gbc_txtCuantity.gridy = 4;
-								getContentPane().add(txtCuantity, gbc_txtCuantity);
-						chActive.setFont(new Font("Aharoni", Font.PLAIN, 11));
-						chActive.setForeground(new Color(102, 153, 51));
-						GridBagConstraints gbc_chActive = new GridBagConstraints();
-						gbc_chActive.insets = new Insets(0, 0, 5, 5);
-						gbc_chActive.gridx = 1;
-						gbc_chActive.gridy = 5;
-						getContentPane().add(chActive, gbc_chActive);
-						chActive.setOpaque(false);
-		
-				lblCom = new JLabel("");
-				lblCom.setForeground(new Color(102, 153, 51));
-				lblCom.setFont(new Font("Aharoni", Font.PLAIN, 12));
-				GridBagConstraints gbc_lblCom = new GridBagConstraints();
-				gbc_lblCom.fill = GridBagConstraints.BOTH;
-				gbc_lblCom.insets = new Insets(0, 0, 5, 0);
-				gbc_lblCom.gridwidth = 6;
-				gbc_lblCom.gridx = 0;
-				gbc_lblCom.gridy = 7;
-				getContentPane().add(lblCom, gbc_lblCom);
-		
-				JButton btnOk = new JButton("OK");
-				btnOk.addKeyListener(new KeyAdapter() {
-					@Override
-					public void keyPressed(KeyEvent arg0) {
-						if(arg0.getKeyCode()==KeyEvent.VK_ENTER){
-							if(isEdited){
-								editWeapon(_em, w);
-							}
-							else{
-								addItem(_em);
-							}
-						}
+
+		JLabel lblCategory = new JLabel("Category:");
+		lblCategory.setForeground(new Color(102, 153, 51));
+		lblCategory.setFont(new Font("Aharoni", Font.PLAIN, 14));
+		lblCategory.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblCategory.setToolTipText("Category of the weapon.If others type others");
+		GridBagConstraints gbc_lblCategory = new GridBagConstraints();
+		gbc_lblCategory.fill = GridBagConstraints.BOTH;
+		gbc_lblCategory.insets = new Insets(0, 0, 5, 5);
+		gbc_lblCategory.gridx = 0;
+		gbc_lblCategory.gridy = 0;
+		getContentPane().add(lblCategory, gbc_lblCategory);
+
+
+		txtCategory = new JTextField();
+		GridBagConstraints gbc_txtCategory = new GridBagConstraints();
+		gbc_txtCategory.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtCategory.insets = new Insets(0, 0, 5, 0);
+		gbc_txtCategory.gridwidth = 5;
+		gbc_txtCategory.gridx = 1;
+		gbc_txtCategory.gridy = 0;
+		getContentPane().add(txtCategory, gbc_txtCategory);
+		txtCategory.setColumns(10);
+
+		JLabel lblManufacturer = new JLabel("Manufacturer:");
+		lblManufacturer.setForeground(new Color(102, 153, 51));
+		lblManufacturer.setFont(new Font("Aharoni", Font.PLAIN, 14));
+		lblManufacturer.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblManufacturer.setToolTipText("Manufacturer of the item.... ");
+		GridBagConstraints gbc_lblManufacturer = new GridBagConstraints();
+		gbc_lblManufacturer.fill = GridBagConstraints.BOTH;
+		gbc_lblManufacturer.insets = new Insets(0, 0, 5, 5);
+		gbc_lblManufacturer.gridx = 0;
+		gbc_lblManufacturer.gridy = 1;
+		getContentPane().add(lblManufacturer, gbc_lblManufacturer);
+
+		txtBrand = new JTextField();
+		GridBagConstraints gbc_txtBrand = new GridBagConstraints();
+		gbc_txtBrand.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtBrand.insets = new Insets(0, 0, 5, 0);
+		gbc_txtBrand.gridwidth = 5;
+		gbc_txtBrand.gridx = 1;
+		gbc_txtBrand.gridy = 1;
+		getContentPane().add(txtBrand, gbc_txtBrand);
+		txtBrand.setColumns(10);
+
+		JLabel lblModel = new JLabel("Model:");
+		lblModel.setForeground(new Color(102, 153, 51));
+		lblModel.setFont(new Font("Aharoni", Font.PLAIN, 14));
+		lblModel.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblModel.setToolTipText("Model of the wapon.If others type others");
+		GridBagConstraints gbc_lblModel = new GridBagConstraints();
+		gbc_lblModel.fill = GridBagConstraints.BOTH;
+		gbc_lblModel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblModel.gridx = 0;
+		gbc_lblModel.gridy = 2;
+		getContentPane().add(lblModel, gbc_lblModel);
+
+		txtModel = new JTextField();
+		GridBagConstraints gbc_txtModel = new GridBagConstraints();
+		gbc_txtModel.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtModel.insets = new Insets(0, 0, 5, 0);
+		gbc_txtModel.gridwidth = 5;
+		gbc_txtModel.gridx = 1;
+		gbc_txtModel.gridy = 2;
+		getContentPane().add(txtModel, gbc_txtModel);
+		txtModel.setColumns(10);
+
+		JLabel lblPrice = new JLabel("Price:");
+		lblPrice.setForeground(new Color(102, 153, 51));
+		lblPrice.setToolTipText("Model of the wapon.If others type others");
+		lblPrice.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblPrice.setFont(new Font("Aharoni", Font.PLAIN, 14));
+		GridBagConstraints gbc_lblPrice = new GridBagConstraints();
+		gbc_lblPrice.fill = GridBagConstraints.BOTH;
+		gbc_lblPrice.insets = new Insets(0, 0, 5, 5);
+		gbc_lblPrice.gridx = 0;
+		gbc_lblPrice.gridy = 3;
+		getContentPane().add(lblPrice, gbc_lblPrice);
+
+		txtPrice = new JTextField();
+		txtPrice.setColumns(10);
+		GridBagConstraints gbc_txtPrice = new GridBagConstraints();
+		gbc_txtPrice.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtPrice.insets = new Insets(0, 0, 5, 5);
+		gbc_txtPrice.gridwidth = 3;
+		gbc_txtPrice.gridx = 1;
+		gbc_txtPrice.gridy = 3;
+		getContentPane().add(txtPrice, gbc_txtPrice);
+
+		JLabel label = new JLabel(",");
+		GridBagConstraints gbc_label = new GridBagConstraints();
+		gbc_label.anchor = GridBagConstraints.EAST;
+		gbc_label.insets = new Insets(0, 0, 5, 5);
+		gbc_label.gridx = 3;
+		gbc_label.gridy = 3;
+		getContentPane().add(label, gbc_label);
+
+		txtPriceDecimals = new JTextField();
+		GridBagConstraints gbc_txtPriceDecimals = new GridBagConstraints();
+		gbc_txtPriceDecimals.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtPriceDecimals.insets = new Insets(0, 0, 5, 0);
+		gbc_txtPriceDecimals.gridwidth = 2;
+		gbc_txtPriceDecimals.gridx = 4;
+		gbc_txtPriceDecimals.gridy = 3;
+		getContentPane().add(txtPriceDecimals, gbc_txtPriceDecimals);
+		txtPriceDecimals.setColumns(10);
+
+		chActive = new JCheckBox("Active");
+		chActive.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER){
+					chActive.setSelected(true);
+				}
+			}
+		});
+
+		lblCuantity = new JLabel("Quantity:");
+		lblCuantity.setToolTipText("Model of the wapon.If others type others");
+		lblCuantity.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblCuantity.setForeground(new Color(102, 153, 51));
+		lblCuantity.setFont(new Font("Aharoni", Font.PLAIN, 14));
+		GridBagConstraints gbc_lblCuantity = new GridBagConstraints();
+		gbc_lblCuantity.fill = GridBagConstraints.BOTH;
+		gbc_lblCuantity.insets = new Insets(0, 0, 5, 5);
+		gbc_lblCuantity.gridx = 0;
+		gbc_lblCuantity.gridy = 4;
+		getContentPane().add(lblCuantity, gbc_lblCuantity);
+
+		txtCuantity = new JTextField();
+		txtCuantity.setToolTipText("In numbers.");
+		txtCuantity.setColumns(10);
+		GridBagConstraints gbc_txtCuantity = new GridBagConstraints();
+		gbc_txtCuantity.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtCuantity.insets = new Insets(0, 0, 5, 0);
+		gbc_txtCuantity.gridwidth = 5;
+		gbc_txtCuantity.gridx = 1;
+		gbc_txtCuantity.gridy = 4;
+		getContentPane().add(txtCuantity, gbc_txtCuantity);
+		chActive.setFont(new Font("Aharoni", Font.PLAIN, 11));
+		chActive.setForeground(new Color(102, 153, 51));
+		GridBagConstraints gbc_chActive = new GridBagConstraints();
+		gbc_chActive.insets = new Insets(0, 0, 5, 5);
+		gbc_chActive.gridx = 1;
+		gbc_chActive.gridy = 5;
+		getContentPane().add(chActive, gbc_chActive);
+		chActive.setOpaque(false);
+
+		lblCom = new JLabel("");
+		lblCom.setForeground(new Color(102, 153, 51));
+		lblCom.setFont(new Font("Aharoni", Font.PLAIN, 12));
+		GridBagConstraints gbc_lblCom = new GridBagConstraints();
+		gbc_lblCom.fill = GridBagConstraints.BOTH;
+		gbc_lblCom.insets = new Insets(0, 0, 5, 0);
+		gbc_lblCom.gridwidth = 6;
+		gbc_lblCom.gridx = 0;
+		gbc_lblCom.gridy = 7;
+		getContentPane().add(lblCom, gbc_lblCom);
+
+		JButton btnOk = new JButton("OK");
+		btnOk.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent arg0) {
+				if(arg0.getKeyCode()==KeyEvent.VK_ENTER){
+					if(isEdited){
+						editWeapon(_em, w);
 					}
-				});
-				btnOk.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						if(isEdited){
-							editWeapon(_em, w);
-						}
-						else{
-							addItem(_em);
-						}
+					else{
+						addItem(_em);
 					}
-				});
-				GridBagConstraints gbc_btnOk = new GridBagConstraints();
-				gbc_btnOk.anchor = GridBagConstraints.NORTHEAST;
-				gbc_btnOk.insets = new Insets(0, 0, 0, 5);
-				gbc_btnOk.gridwidth = 2;
-				gbc_btnOk.gridx = 3;
-				gbc_btnOk.gridy = 8;
-				getContentPane().add(btnOk, gbc_btnOk);
-		
-				JButton btnCancel = new JButton("Cancel");
-				btnCancel.addKeyListener(new KeyAdapter() {
-					@Override
-					public void keyPressed(KeyEvent e) {
-						Shop backToShop=new Shop(u,_em);
-						backToShop.setVisible(true);
-						WeaponEditor.this.dispose();
-					}
-				});
-				btnCancel.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						Shop backToShop=new Shop(u,_em);
-						backToShop.setVisible(true);
-						WeaponEditor.this.dispose();
-					}
-				});
-				GridBagConstraints gbc_btnCancel = new GridBagConstraints();
-				gbc_btnCancel.fill = GridBagConstraints.HORIZONTAL;
-				gbc_btnCancel.anchor = GridBagConstraints.NORTH;
-				gbc_btnCancel.gridx = 5;
-				gbc_btnCancel.gridy = 8;
-				getContentPane().add(btnCancel, gbc_btnCancel);
+				}
+			}
+		});
+		btnOk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(isEdited){
+					editWeapon(_em, w);
+				}
+				else{
+					addItem(_em);
+				}
+			}
+		});
+		GridBagConstraints gbc_btnOk = new GridBagConstraints();
+		gbc_btnOk.anchor = GridBagConstraints.NORTHEAST;
+		gbc_btnOk.insets = new Insets(0, 0, 0, 5);
+		gbc_btnOk.gridwidth = 2;
+		gbc_btnOk.gridx = 3;
+		gbc_btnOk.gridy = 8;
+		getContentPane().add(btnOk, gbc_btnOk);
+
+		JButton btnCancel = new JButton("Cancel");
+		btnCancel.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				Shop backToShop=new Shop(u,_em);
+				backToShop.setVisible(true);
+				WeaponEditor.this.dispose();
+			}
+		});
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Shop backToShop=new Shop(u,_em);
+				backToShop.setVisible(true);
+				WeaponEditor.this.dispose();
+			}
+		});
+		GridBagConstraints gbc_btnCancel = new GridBagConstraints();
+		gbc_btnCancel.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnCancel.anchor = GridBagConstraints.NORTH;
+		gbc_btnCancel.gridx = 5;
+		gbc_btnCancel.gridy = 8;
+		getContentPane().add(btnCancel, gbc_btnCancel);
 
 
 	}
@@ -364,24 +364,23 @@ public class WeaponEditor extends JFrame {
 		if(category==null || brand==null || model==null){
 			lblCom.setText("*You forget something");
 		}
-		if(category==null || brand==null || model==null){
-			lblCom.setText("*You forget something");
+		else{
+			w.setCategory(category);
+			w.setBrand(brand);
+			w.setModel(model);
+			w.setQuantity(quantity);
+			double price=checkPrices(txtPrice.getText(),txtPriceDecimals.getText());
+			w.setPrice(price);
+			w.setActive(isActive);
+			EntityTransaction tx = thatEm.getTransaction();
+			tx.begin();
+			manager.updateWeapon(w);
+			tx.commit();
+			WeaponEditor.this.dispose();
+			Shop backToShop=new Shop(u, em);
+			backToShop.setVisible(true);
+			WeaponEditor.this.dispose();
 		}
-		w.setCategory(category);
-		w.setBrand(brand);
-		w.setModel(model);
-		w.setQuantity(quantity);
-		double price=checkPrices(txtPrice.getText(),txtPriceDecimals.getText());
-		w.setPrice(price);
-		w.setActive(isActive);
-		EntityTransaction tx = thatEm.getTransaction();
-		tx.begin();
-		manager.updateWeapon(w);
-		tx.commit();
-		WeaponEditor.this.dispose();
-		Shop backToShop=new Shop(u, em);
-		backToShop.setVisible(true);
-		WeaponEditor.this.dispose();
 	}
 	private double checkPrices(String full,String decimals) {
 		try {

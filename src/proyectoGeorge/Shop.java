@@ -347,12 +347,18 @@ public class Shop extends JFrame {
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER){
 					removeItem();
+					addItemsToListFilter();
+					filterBoxes();
+					filterModel();
 				}
 			}
 		});
 		btnRemove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				removeItem();
+				addItemsToListFilter();
+				filterBoxes();
+				filterModel();
 			}
 		});
 		btnRemove.setFont(new Font("Gungsuh", Font.BOLD, 12));

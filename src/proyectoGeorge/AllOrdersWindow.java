@@ -121,7 +121,7 @@ public class AllOrdersWindow extends JFrame {
 		JlistOrders.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(JlistOrders);
 		JlistOrders.setOpaque(false);
-		JlistOrders.setCellRenderer(new TransparentListCellRenderer());
+		JlistOrders.setCellRenderer(new OrderCellRenderer());
 		scrollPane.getViewport().setOpaque(false);
 		scrollPane.setOpaque(false);
 		
@@ -209,7 +209,7 @@ public class AllOrdersWindow extends JFrame {
 		JlistOrders.setModel(model);
 	}
 	protected void executeOrder() {
-		if(JlistOrders==null){
+		if(JlistOrders.getSelectedValue()==null){
 			lblRequests.setText("Please select an order to remove!");
 			return;
 		}

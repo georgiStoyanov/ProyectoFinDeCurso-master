@@ -29,6 +29,9 @@ public class Order {
 	public Weapon getWeapon(){
 		return this.ordered;
 	}
+	public int getId(){
+		return this.idOrder;
+	}
 	public void setWeapon(Weapon w){
 		this.ordered=w;
 	}
