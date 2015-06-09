@@ -87,6 +87,7 @@ public class UsersWindow extends JFrame {
 		manager=new UserManagerHibernate(em);
 		setFrameIcon();
 		setBackground();
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 579, 269);
 		getContentPane().setLayout(null);
