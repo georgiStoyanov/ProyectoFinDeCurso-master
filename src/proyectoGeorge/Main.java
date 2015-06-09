@@ -56,7 +56,7 @@ public class Main extends JFrame{
 
 	private JPasswordField txtPassword;
 	private JTextField txtUser;
-	JLabel lblLogin;
+	public static JLabel lblLogin;
 	private static EntityManager em;
 	protected boolean isAdmin=false;
 	public URL buttonImage=this.getClass().getResource("/source/woodButton.png");

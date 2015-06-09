@@ -31,8 +31,8 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
 			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@//localhost/XE" />
-			<property name="hibernate.connection.username" value="george" />
-			<property name="hibernate.connection.password" value="28071992" />
+			<property name="hibernate.connection.username" value="" />
+			<property name="hibernate.connection.password" value="" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
@@ -45,7 +45,7 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
 			<!-- if you don't have a database already created append ;create=true 
 				to end of the jdbc url -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby:alumnoDB;create=true" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:ShopDB;create=true" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="root" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
